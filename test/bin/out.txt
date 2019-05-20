@@ -1,0 +1,466 @@
+Running main() from ../gtest/googletest/src/gtest_main.cc
+[==========] Running 9 tests from 2 test suites.
+[----------] Global test environment set-up.
+[----------] 7 tests from PAllocatorTest
+[ RUN      ] PAllocatorTest.GetAllocator
+utility_test.cpp:26: Failure
+Expected: (in.good()) != (false), actual: false vs false
+utility_test.cpp:29: Failure
+Expected equality of these values:
+  temp->getMaxFileId()
+    Which is: 0
+  1
+[  FAILED  ] PAllocatorTest.GetAllocator (0 ms)
+[ RUN      ] PAllocatorTest.NewLeafGroup
+utility_test.cpp:41: Failure
+Expected equality of these values:
+  result
+    Which is: false
+  true
+[  FAILED  ] PAllocatorTest.NewLeafGroup (0 ms)
+[ RUN      ] PAllocatorTest.UseLeaf
+utility_test.cpp:54: Failure
+Expected equality of these values:
+  result
+    Which is: false
+  true
+utility_test.cpp:56: Failure
+Expected equality of these values:
+  leaf.fileId
+    Which is: 0
+  1
+utility_test.cpp:57: Failure
+Expected equality of these values:
+  leaf.offset
+    Which is: 140734498595896
+  LEAF_GROUP_HEAD + (16 - 1) * calLeafSize()
+    Which is: 29034
+utility_test.cpp:63: Failure
+Expected equality of these values:
+  bit
+    Which is: '\0'
+  1
+[  FAILED  ] PAllocatorTest.UseLeaf (0 ms)
+[ RUN      ] PAllocatorTest.AllocateMultiplyLeaves
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:77: Failure
+Expected equality of these values:
+  flag
+    Which is: false
+  true
+utility_test.cpp:86: Failure
+Expected equality of these values:
+  f1.is_open()
+    Which is: false
+  true
+utility_test.cpp:87: Failure
+Expected equality of these values:
+  f2.is_open()
+    Which is: false
+  true
+utility_test.cpp:88: Failure
+Expected equality of these values:
+  f3.is_open()
+    Which is: false
+  true
+utility_test.cpp:89: Failure
+Expected equality of these values:
+  f4.is_open()
+    Which is: false
+  true
+[  FAILED  ] PAllocatorTest.AllocateMultiplyLeaves (4 ms)
+[ RUN      ] PAllocatorTest.UseMultiplyLeaves
+utility_test.cpp:115: Failure
+Expected equality of these values:
+  leaf.offset
+    Which is: 94502782207192
+  offset
+    Which is: 29034
+utility_test.cpp:115: Failure
+Expected equality of these values:
+  leaf.offset
+    Which is: 94502782207192
+  offset
+    Which is: 27100
+utility_test.cpp:115: Failure
+Expected equality of these values:
+  leaf.offset
+    Which is: 94502782207192
+  offset
+    Which is: 25166
+utility_test.cpp:115: Failure
+Expected equality of these values:
+  leaf.offset
+    Which is: 94502782207192
+  offset
+    Which is: 23232
+[  FAILED  ] PAllocatorTest.UseMultiplyLeaves (0 ms)
+[ RUN      ] PAllocatorTest.FreeSingleLeaf
+utility_test.cpp:128: Failure
+Expected equality of these values:
+  p->getLeaf(leaf, pmem_addr)
+    Which is: false
+  true
+utility_test.cpp:129: Failure
+Expected equality of these values:
+  leaf.offset
+    Which is: 94502782207192
+  offset
+    Which is: 29034
+utility_test.cpp:130: Failure
+Expected equality of these values:
+  p->freeLeaf(leaf)
+    Which is: false
+  true
+utility_test.cpp:131: Failure
+Expected equality of these values:
+  p->getLeaf(leaf, pmem_addr)
+    Which is: false
+  true
+utility_test.cpp:132: Failure
+Expected equality of these values:
+  leaf.offset
+    Which is: 94502782207192
+  offset
+    Which is: 29034
+[  FAILED  ] PAllocatorTest.FreeSingleLeaf (1 ms)
+[ RUN      ] PAllocatorTest.GetLeaf
+utility_test.cpp:142: Failure
+Expected equality of these values:
+  result
+    Which is: false
+  true
+utility_test.cpp:143: Failure
+Expected equality of these values:
+  leaf.fileId
+    Which is: 0
+  1
+utility_test.cpp:144: Failure
+Expected equality of these values:
+  leaf.offset
+    Which is: 94502762760142
+  LEAF_GROUP_HEAD + (16 - 1) * calLeafSize()
+    Which is: 29034
+utility_test.cpp:146: Failure
+Expected: (in.good()) != (false), actual: false vs false
+[  FAILED  ] PAllocatorTest.GetLeaf (0 ms)
+[----------] 7 tests from PAllocatorTest (5 ms total)
+
+[----------] 2 tests from UtilityTest
+[ RUN      ] UtilityTest.CountOneBits
+[       OK ] UtilityTest.CountOneBits (0 ms)
+[ RUN      ] UtilityTest.Clhash
