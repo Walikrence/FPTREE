@@ -61,7 +61,9 @@ $(BUILD_DIR):
 all : $(ALL)
 
 clean :
-	rm -rf *.o ./bin/* ../data/*
+	@ rm -rf *.o ./bin/* ../data/*
+	@ rm -rf bin
+	@ rm -rf build
 
 cleand : 
 	rm -rf ../data/*

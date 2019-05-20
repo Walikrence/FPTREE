@@ -59,7 +59,8 @@ USER_HEADERS = ../include/*.h
 all : $(GTEST_LIBS) $(TESTS)
 
 clean :
-	rm -f $(GTEST_LIBS) $(TESTS) *.o ../data/*
+	@ rm -f $(GTEST_LIBS) $(TESTS) *.o ../data/*
+	@ rm -rf bin
 cleano :
 	rm -f $(GTEST_LIBS) *.o
 
@@ -77,50 +78,65 @@ GTEST_SRCS_ = $(GTEST_DIR)/src/*.cc $(GTEST_DIR)/src/*.h $(GTEST_HEADERS)
 # conservative and not optimized.  This is fine as Google Test
 # compiles fast and for ordinary users its source rarely changes.
 gtest-all.o : $(GTEST_SRCS_)
-	$(CXX) $(CPPFLAGS) -I$(GTEST_DIR) $(CXXFLAGS) -c \
+	@ $(CXX) $(CPPFLAGS) -I$(GTEST_DIR) $(CXXFLAGS) -c \
             $(GTEST_DIR)/src/gtest-all.cc
 
 gtest_main.o : $(GTEST_SRCS_)
-	$(CXX) $(CPPFLAGS) -I$(GTEST_DIR) $(CXXFLAGS) -c \
+	@ $(CXX) $(CPPFLAGS) -I$(GTEST_DIR) $(CXXFLAGS) -c \
             $(GTEST_DIR)/src/gtest_main.cc
 
 libgtest.a : gtest-all.o
-	$(AR) $(ARFLAGS) $@ $^
+	@ $(AR) $(ARFLAGS) $@ $^
 
 libgtest_main.a : gtest-all.o gtest_main.o
-	$(AR) $(ARFLAGS) $@ $^
+	@ $(AR) $(ARFLAGS) $@ $^
 
 # ===============================TODO: all below=================================
 INCLUDE = -I $(USER_HEADER_DIR)
 
 fptree.o : $(USER_DIR)/fptree.cpp  $(USER_HEADER_DIR)/fptree.h $(GTEST_HEADERS)
-	$(CXX) $(CPPFLAGS) $(CXXFLAGS) $(INCLUDE) -c $< -o $@
-
+	@ echo "comiling  $@"
+	@ $(CXX) $(CPPFLAGS) $(CXXFLAGS) $(INCLUDE) -c $< -o $@
+	@ echo "comiling  $@ complete"
 utility.o : $(USER_DIR)/utility.cpp  $(USER_HEADER_DIR)/utility/utility.h $(GTEST_HEADERS)
-	$(CXX) $(CPPFLAGS) $(CXXFLAGS) $(INCLUDE) -c $< -o $@
+	@ echo "comiling  $@"
+	@ $(CXX) $(CPPFLAGS) $(CXXFLAGS) $(INCLUDE) -c $< -o $@
+	@ echo "comiling  $@ complete"
 
 p_allocator.o :$(USER_DIR)/p_allocator.cpp $(USER_HEADER_DIR)/utility/p_allocator.h $(GTEST_HEADERS)
-	$(CXX) $(CPPFLAGS) $(CXXFLAGS) $(INCLUDE) -c $< -o $@
+	@ echo "comiling  $@"
+	@ $(CXX) $(CPPFLAGS) $(CXXFLAGS) $(INCLUDE) -c $< -o $@
+	@ echo "comiling  $@ complete"
 
 clhash.o : $(USER_DIR)/clhash.c $(USER_HEADER_DIR)/utility/clhash.h
-	$(CC) $(CFLAGS) -c $(USER_DIR)/clhash.c -I $(USER_HEADER_DIR)
+	@ echo "comiling  $@"
+	@ $(CC) $(CFLAGS) -c $(USER_DIR)/clhash.c -I $(USER_HEADER_DIR)
+	@ echo "comiling  $@ complete"
 
 # utility test
 $(UTILITY_TEST) :utility_test.o p_allocator.o utility.o clhash.o $(GTEST_LIBS) | $(BIN)
-	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -L$(GTEST_LIB_DIR) -lgtest_main -lpthread $^ -o $@
+	@ echo "comiling  $@"
+	@ $(CXX) $(CPPFLAGS) $(CXXFLAGS) -L$(GTEST_LIB_DIR) -lgtest_main -lpthread $^ -o $@
+	@ echo "comiling  $@ complete"
 
 utility_test.o : utility_test.cpp $(USER_HEADER_DIR)/utility/utility.h $(GTEST_HEADERS) | $(BIN)
-	$(CXX) $(CPPFLAGS) $(CXXFLAGS) $(INCLUDE) -c $< -o $@
+	@ echo "comiling  $@"
+	@ $(CXX) $(CPPFLAGS) $(CXXFLAGS) $(INCLUDE) -c $< -o $@
+	@ echo "comiling  $@ complete"
 
 # fptree test
 $(FPTREE_TEST) : fptree_test.o fptree.o p_allocator.o utility.o clhash.o $(GTEST_LIBS) | $(BIN)
-	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -L$(GTEST_LIB_DIR) -lgtest_main -lpthread $^ -o $@
+	@ echo "comiling  $@"
+	@ $(CXX) $(CPPFLAGS) $(CXXFLAGS) -L$(GTEST_LIB_DIR) -lgtest_main -lpthread $^ -o $@
+	@ echo "comiling  $@ complete"
 
 fptree_test.o : fptree_test.cpp $(USER_HEADER_DIR)/fptree.h $(GTEST_HEADERS)
-	$(CXX) $(CPPFLAGS) $(CXXFLAGS) $(INCLUDE) -c $< -o $@
+	@ echo "comiling  $@"
+	@ $(CXX) $(CPPFLAGS) $(CXXFLAGS) $(INCLUDE) -c $< -o $@
+	@ echo "comiling  $@ complete"
 
 $(BIN):
-	mkdir -p bin
+	@ mkdir -p bin
 
 $(USER_HEADER_DIR)/fptree.h:
 
